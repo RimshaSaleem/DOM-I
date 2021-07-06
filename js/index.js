@@ -40,3 +40,39 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+let nav = document.querySelector('nav');
+
+let navs = document.querySelectorAll('a');
+navs[0].textContent= siteContent["nav"]["nav-item-1"];
+navs[1].textContent= siteContent["nav"]["nav-item-2"];
+navs[2].textContent= siteContent["nav"]["nav-item-3"];
+navs[3].textContent= siteContent["nav"]["nav-item-4"];
+navs[4].textContent= siteContent["nav"]["nav-item-5"];
+navs[5].textContent= siteContent["nav"]["nav-item-6"];
+
+navs[0].style.color= 'green';
+navs[1].style.color= 'green';
+navs[2].style.color= 'green';
+navs[3].style.color= 'green';
+navs[4].style.color= 'green';
+navs[5].style.color= 'green';
+
+var home = document.createElement("a");
+home.innerText = "Home"
+home.href = '#';
+home.style.color='green';
+var blog = document.createElement("a");
+blog.innerText = "Blog";
+blog.href='#';
+blog.style.color = 'green';
+
+nav.prepend(home);
+nav.appendChild(blog);
+let h1Selector = document.querySelector('.cta h1');
+h1Selector.textContent = siteContent ["cta"]["h1"];
+
+let buttonSelector = document.querySelector('.cta button');
+buttonSelector.textContent = siteContent["cta"]["button"];
+
+const img1 = document.getElementById('cta-img');
+img1.setAttribute('src', siteContent["cta"]["img-src"]);
